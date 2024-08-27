@@ -1,0 +1,25 @@
+{
+    "name": "garden-planner",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "cd server && npm start",
+        "client": "cd client && npm start",
+        "test": "npm run test:client && npm run test:server",
+        "test:client": "cd client && npm test",
+        "test:server": "cd server && npm test",
+        "cypress:open": "cd client && npx cypress open",
+        "cypress:run": "cd client && npx cypress run"
+    },
+    "devDependencies": {
+        "concurrently": "^6.0.0"
+    },
+    "jest": {
+        "setupFiles": [
+            "<rootDir>/jest.setup.js"
+        ]
+    },
+    "dependencies": {
+        "util": "^0.12.5"
+    }
+}

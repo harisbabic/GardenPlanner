@@ -1,0 +1,4 @@
+# ~/Node/config/.gitignore
+node_modules/
+.env
+logs/
