@@ -15,9 +15,7 @@
         "concurrently": "^6.0.0"
     },
     "jest": {
-        "setupFiles": [
-            "<rootDir>/jest.setup.js"
-        ]
+        "testMatch": ["<rootDir>/src/__tests__/**/*.test.js"]
     },
     "dependencies": {
         "util": "^0.12.5"
