@@ -1,3 +1,5 @@
+// server/src/index.js
+
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
@@ -18,23 +20,33 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
 
-// Add request logging with Winston
-app.use(expressWinston.logger({
-  transports: [
-    new winston.transports.File({ filename: 'server/src/logs/combined.log' })
-  ],
-  format: winston.format.combine(
-    winston.format.colorize(),
-    winston.format.json()
-  )
-}));
-
-// Ensure that routes are being correctly used:
-app.use(routes);
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    winston.info(`Server is running on port ${PORT}`);
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    transports: [
+        new winston.transports.Console(),
+        new winston.transports.File({ filename: 'server/src/logs/combined.log' }),
+    ],
 });
 
-module.exports = app;
+// Add request logging with Winston
+app.use(expressWinston.logger({
+    transports: [
+        new winston.transports.Console(),
+        new winston.transports.File({ filename: 'server/src/logs/combined.log' }),
+    ],
+    format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.json()
+    ),
+}));
+
+// Use routes
+app.use('/api', routes);
+
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, () => {
+    logger.info(`Server is running on port ${PORT}`);
+});
+
+module.exports = { app, server };

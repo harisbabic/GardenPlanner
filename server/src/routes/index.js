@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const plantRoutes = require('./plantRoutes');
 
-// Ensure that the plant routes are being used correctly:
-router.use(plantRoutes);
+// Use the plant routes with a base path
+router.use('/api', plantRoutes);
 
 module.exports = router;

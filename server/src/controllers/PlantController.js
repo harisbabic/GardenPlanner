@@ -1,5 +1,5 @@
 // server/src/controllers/PlantController.js
-const db = require('../config/db');
+const PlantModel = require('../models/Plant');
 const Joi = require('joi');
 
 const plantSchema = Joi.object({
@@ -16,27 +16,24 @@ exports.createPlant = async (req, res, next) => {
     if (error) {
       return res.status(400).json({ error: error.details[0].message });
     }
-    const result = await db.query(
-      'INSERT INTO plants (name, type, plant_date, ph_level, feeding_schedule) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-      [value.name, value.type, value.plantDate, value.phLevel, value.feedingSchedule]
+    const result = await PlantModel.createPlant(
+      value.name,
+      value.type,
+      value.plantDate,
+      value.phLevel,
+      value.feedingSchedule
     );
-    res.status(201).json(result.rows[0]);
+    res.status(201).json(result);
   } catch (err) {
     next(err);
   }
 };
 
-
-exports.getPlants = (req, res) => {
-    // Example: Fetch plants from the database
-    // Assume plants is an array of plant objects
-    const plants = [
-        { id: 1, name: 'Tomato', type: 'Vegetable' },
-        { id: 2, name: 'Rose', type: 'Flower' },
-    ];
-
+exports.getPlants = async (req, res) => {
+  try {
+    const plants = await PlantModel.getPlants();
     res.status(200).json(plants);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch plants' });
+  }
 };
-
-// Other controller methods can follow here...
-

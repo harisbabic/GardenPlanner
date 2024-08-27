@@ -1,3 +1,5 @@
+// server/src/config/db.js
+
 const { Pool } = require('pg');
 const dotenv = require('dotenv');
 
@@ -11,6 +13,4 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
-module.exports = {
-  query: (text, params) => pool.query(text, params),
-};
+module.exports = pool;  // Directly export the pool instance

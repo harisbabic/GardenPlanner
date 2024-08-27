@@ -5,6 +5,7 @@ const router = express.Router();
 const PlantController = require('../controllers/PlantController');
 
 // Ensure that the route is defined like this:
+router.post('/plants', PlantController.createPlant);
 router.get('/plants', PlantController.getPlants);
 
 module.exports = router;
