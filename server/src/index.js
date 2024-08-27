@@ -9,12 +9,10 @@ const routes = require('./routes');
 const winston = require('winston');
 const expressWinston = require('express-winston');
 
-// Load environment variables from .env file
 dotenv.config();
 
 const app = express();
 
-// Middleware for security and logging
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(cors());
@@ -29,7 +27,6 @@ const logger = winston.createLogger({
     ],
 });
 
-// Add request logging with Winston
 app.use(expressWinston.logger({
     transports: [
         new winston.transports.Console(),
@@ -41,7 +38,7 @@ app.use(expressWinston.logger({
     ),
 }));
 
-// Use routes
+// Ensure the correct prefix is used here
 app.use('/api', routes);
 
 const PORT = process.env.PORT || 3000;
