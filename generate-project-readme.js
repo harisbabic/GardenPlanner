@@ -10,6 +10,8 @@ function log(message) {
     console.log(`[DEBUG]: ${message}`);
 }
 
+const dirToConcat = [''];
+
 function generateReadmeForDirectory(directoryPath, directoryName, depth = 0) {
     let readmeContent = `${'#'.repeat(depth + 1)} ${directoryName}\n\n`;
 
