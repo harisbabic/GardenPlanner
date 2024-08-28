@@ -2,6 +2,20 @@
 
 This document details the database schema for the Garden Planner project. The schema has been designed to be scalable, secure, and flexible, allowing for future expansions and optimizations. Below are the tables, their relationships, and key design considerations.
 
+                                       Users
+                                      /  |  \
+                          User_Roles  |  Gardens  Tasks
+                                |      |    |      |
+                              Roles    |  Plants   Scheduling
+                              / | \    |    |    /   \
+                    Permissions | |    |    |  Tasks  Reminders
+                                | |    |    |          |
+                     Role_Permissions | Scheduling     Reports
+                                     |                 /   \
+                                  Security_Access   Invoices Clients
+                                                   /     \
+                                             Payments    Notifications
+
 ---
 
 ## **1. Users Table**
