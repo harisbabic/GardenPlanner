@@ -1,60 +1,54 @@
-# Monthly Garden Tracking Form
+# MONTHLY_TRACKING_FORM.md
 
-## Overview
+## Purpose
+This document provides a template for tracking the progress of the GardenPlanner project on a monthly basis. It helps in assessing the status of various tasks, identifying any bottlenecks, and ensuring that the project remains on track.
 
-This form is designed to track the ongoing progress of each plant in your garden on a monthly basis. Regular tracking allows for early identification of issues, adjustment of care routines, and overall better management of garden health.
+## Table of Contents
+1. [Monthly Objectives](#1-monthly-objectives)
+2. [Progress Summary](#2-progress-summary)
+3. [Key Achievements](#3-key-achievements)
+4. [Challenges and Solutions](#4-challenges-and-solutions)
+5. [Upcoming Tasks](#5-upcoming-tasks)
+6. [Team Feedback](#6-team-feedback)
 
-## Form Structure
+## 1. Monthly Objectives
+**Purpose:** Defines the primary goals for the month, setting clear targets for the team to achieve.
 
-### 1. **General Information**
-   - **Tracking Month**: *Dropdown* - Select the month being tracked.
-   - **Plant ID**: *Numeric Input* - Unique identifier for the plant being tracked (linked to the plant database).
-   - **Location**: *Text Input* - Reconfirm or update the specific garden location of the plant.
+### Key Points:
+- **Objectives:** List the specific objectives for the month, such as completing certain features, fixing critical bugs, or improving performance.
+- **Priority:** Assign a priority level to each objective to help the team focus on the most important tasks.
 
-### 2. **Growth Metrics**
-   - **Height**: *Numeric Input* - Current height of the plant in centimeters.
-   - **Width/Spread**: *Numeric Input* - Current spread or width of the plant in centimeters.
-   - **New Growth**: *Dropdown* - Rate the new growth observed (e.g., None, Moderate, Significant).
+## 2. Progress Summary
+**Purpose:** Provides a snapshot of the progress made during the month, including completed tasks and those still in progress.
 
-### 3. **Health and Vigor**
-   - **Leaf Color**: *Dropdown* - Choose the color representing health (e.g., Deep Green, Yellowing, Browning).
-   - **Pest Presence**: *Dropdown* - Report on the presence of pests (e.g., None, Mild Infestation, Severe Infestation).
-   - **Disease Symptoms**: *Dropdown* - Report any signs of disease (e.g., None, Spots on Leaves, Wilting).
-   - **Overall Vigor**: *Dropdown* - Rate the overall health (e.g., Strong, Average, Weak).
+### Key Points:
+- **Completed Tasks:** List all tasks completed during the month, with brief descriptions.
+- **Ongoing Tasks:** Detail tasks that are still in progress, along with their current status.
 
-### 4. **Care and Maintenance**
-   - **Watering Frequency**: *Dropdown* - Indicate how often the plant was watered this month (e.g., Daily, Biweekly, Weekly).
-   - **Fertilizer Applied**: *Text Input* - Detail the type and amount of fertilizer used, if any.
-   - **Pruning/Trimming**: *Text Area* - Record any pruning or trimming done this month.
+## 3. Key Achievements
+**Purpose:** Highlights the major accomplishments of the month, recognizing the team’s hard work and contributions.
 
-### 5. **Observations and Actions**
-   - **Noted Issues**: *Text Area* - Record any issues or anomalies observed.
-   - **Actions Taken**: *Text Area* - Detail any corrective actions or maintenance activities performed.
+### Key Points:
+- **Major Milestones:** Identify any significant milestones reached, such as launching a new feature or resolving a major issue.
+- **Impact:** Describe the impact of these achievements on the project and any stakeholders.
 
-## Data Validation
+## 4. Challenges and Solutions
+**Purpose:** Documents any challenges encountered during the month and the solutions implemented to overcome them.
 
-- **Height and Width**: Must be positive integers.
-- **Leaf Color and Pest Presence**: Required fields for comprehensive tracking.
-- **Plant ID**: Must correspond to an existing plant in the database.
+### Key Points:
+- **Challenges:** Describe any obstacles or issues that arose, such as technical difficulties, resource constraints, or unexpected delays.
+- **Solutions:** Explain the strategies used to address these challenges and any lessons learned.
 
-## Example Form Submission
+## 5. Upcoming Tasks
+**Purpose:** Outlines the tasks and objectives for the upcoming month, providing a roadmap for continued progress.
 
-```json
-{
-  "trackingMonth": "April 2024",
-  "plantId": 101,
-  "location": "Bed 3, Row 2",
-  "height": 40,
-  "width": 30,
-  "newGrowth": "Moderate",
-  "leafColor": "Deep Green",
-  "pestPresence": "None",
-  "diseaseSymptoms": "None",
-  "overallVigor": "Strong",
-  "wateringFrequency": "Weekly",
-  "fertilizerApplied": "10-10-10 Organic, 100g",
-  "pruningTrimming": "Removed lower leaves",
-  "notedIssues": "None",
-  "actionsTaken": "Regular maintenance"
-}
-```
+### Key Points:
+- **Planned Tasks:** List the tasks that will be prioritized in the next month, along with their deadlines.
+- **Dependencies:** Identify any dependencies or resources needed to complete these tasks.
+
+## 6. Team Feedback
+**Purpose:** Collects feedback from team members on the past month’s work, fostering continuous improvement.
+
+### Key Points:
+- **Feedback:** Provide a space for team members to share their thoughts on what went well and what could be improved.
+- **Suggestions:** Encourage team members to suggest ideas for improving processes, communication, or tools.

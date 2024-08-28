@@ -1,8 +1,79 @@
-# Garden Reference Tables
+# TABLES.md
 
-## Overview
+## Purpose
+This document provides a reference for the database tables used in the GardenPlanner project. It includes definitions, relationships, and any special considerations for managing the data.
 
-This document contains essential reference tables for garden management, including planting times, soil pH levels, feeding schedules, and recommended tools. These tables provide vital information to optimize plant health and garden productivity.
+## Table of Contents
+1. [Plant Table](#1-plant-table)
+2. [Garden Table](#2-garden-table)
+3. [User Table](#3-user-table)
+4. [Maintenance Table](#4-maintenance-table)
+5. [Harvest Table](#5-harvest-table)
+6. [Relationships and Constraints](#6-relationships-and-constraints)
+
+## 1. Plant Table
+**Purpose:** Stores information about the individual plants in the garden.
+
+### Columns:
+- **ID:** Primary key, unique identifier for each plant.
+- **Name:** The common name of the plant.
+- **Scientific Name:** The scientific name of the plant.
+- **Plant Date:** The date the plant was added to the garden.
+- **Location:** The location of the plant within the garden.
+- **Health Status:** A rating of the plant’s health.
+
+## 2. Garden Table
+**Purpose:** Contains details about the different gardens or zones within the project.
+
+### Columns:
+- **ID:** Primary key, unique identifier for each garden.
+- **Name:** The name of the garden or zone.
+- **Size:** The size of the garden area.
+- **Location:** The general location of the garden.
+- **Soil Type:** The type of soil in the garden area.
+
+## 3. User Table
+**Purpose:** Manages user information and access rights within the GardenPlanner project.
+
+### Columns:
+- **ID:** Primary key, unique identifier for each user.
+- **Username:** The user’s chosen username.
+- **Email:** The user’s email address.
+- **Role:** The user’s role in the project (e.g., Admin, Gardener).
+- **Password Hash:** The hashed password for secure authentication.
+
+## 4. Maintenance Table
+**Purpose:** Logs all maintenance activities performed within the garden.
+
+### Columns:
+- **ID:** Primary key, unique identifier for each maintenance record.
+- **Plant ID:** Foreign key linking to the Plant Table.
+- **Activity:** The type of maintenance performed (e.g., watering, fertilizing).
+- **Date:** The date the maintenance was performed.
+- **Notes:** Any additional notes about the maintenance activity.
+
+## 5. Harvest Table
+**Purpose:** Tracks the yield from the garden, recording harvest details for each plant.
+
+### Columns:
+- **ID:** Primary key, unique identifier for each harvest record.
+- **Plant ID:** Foreign key linking to the Plant Table.
+- **Harvest Date:** The date the harvest took place.
+- **Quantity:** The amount of produce harvested.
+- **Quality:** A rating of the harvest’s quality.
+
+## 6. Relationships and Constraints
+**Purpose:** Defines the relationships between tables and any constraints that must be observed.
+
+### Key Relationships:
+- **Plant to Garden:** Each plant belongs to one garden, creating a one-to-many relationship between the Garden Table and the Plant Table.
+- **User to Maintenance:** Each maintenance activity is logged by a user, creating a one-to-many relationship between the User Table and the Maintenance Table.
+- **Plant to Harvest:** Each harvest record is linked to a specific plant, creating a one-to-many relationship between the Plant Table and the Harvest Table.
+
+### Constraints:
+- **Foreign Keys:** Ensure that all foreign key relationships are maintained to preserve data integrity.
+- **Unique Constraints:** Apply unique constraints where necessary to prevent duplicate records.
+- **Not Null Constraints:** Ensure that critical fields (e.g., Plant Name, Harvest Date) are not left blank.
 
 ## Table 1: Optimal Planting Times
 

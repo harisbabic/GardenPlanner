@@ -1,60 +1,61 @@
-# Planting and Growth Tracking Form
+# PLANT_TRACKING_FORM.md
 
-## Overview
+## Purpose
+This document serves as a template for tracking the growth, health, and maintenance of plants within the GardenPlanner project. It ensures that each plant is monitored regularly, allowing for timely interventions if issues arise.
 
-This form is designed to track the planting and growth progress of each plant in your garden. The information collected will help monitor plant health, soil conditions, and growth stages, ensuring that your garden thrives throughout the growing season.
+## Table of Contents
+1. [Plant Information](#1-plant-information)
+2. [Growth Metrics](#2-growth-metrics)
+3. [Health Assessment](#3-health-assessment)
+4. [Maintenance Log](#4-maintenance-log)
+5. [Harvest Record](#5-harvest-record)
+6. [Observations and Notes](#6-observations-and-notes)
 
-## Form Structure
+## 1. Plant Information
+**Purpose:** Records basic information about each plant, providing a reference for tracking its progress.
 
-### 1. **Plant Details**
-   - **Plant Name**: *Text Input* - The common name or species of the plant (e.g., Tomato, Basil).
-   - **Plant Type**: *Dropdown* - Select the type of plant (e.g., Vegetable, Herb, Flower).
-   - **Planting Date**: *Date Picker* - The date when the plant was planted.
-   - **Planting Location**: *Text Input* - Specific location within the garden (e.g., Bed 3, Row 2).
+### Key Points:
+- **Plant Name:** Enter the common name of the plant (e.g., Tomato, Rose).
+- **Scientific Name:** Include the scientific name for accuracy (e.g., Solanum lycopersicum).
+- **Date Planted:** Record the date the plant was planted.
+- **Location:** Specify the location in the garden where the plant is growing.
 
-### 2. **Soil Conditions**
-   - **pH Level**: *Numeric Input* - The pH level of the soil at the planting location.
-   - **Soil Type**: *Dropdown* - Select the type of soil (e.g., Loam, Clay, Sandy).
-   - **Soil Moisture**: *Dropdown* - Select the moisture level (e.g., Dry, Moist, Wet).
+## 2. Growth Metrics
+**Purpose:** Tracks key growth indicators to monitor the plant’s development over time.
 
-### 3. **Growth Progress**
-   - **Current Growth Stage**: *Dropdown* - Select the current stage of growth (e.g., Seedling, Vegetative, Flowering).
-   - **Height**: *Numeric Input* - Current height of the plant in centimeters.
-   - **Health Status**: *Dropdown* - Select the overall health status (e.g., Healthy, Wilting, Pest-Infested).
+### Key Points:
+- **Height:** Measure the plant’s height at regular intervals (e.g., weekly).
+- **Width:** Record the width or spread of the plant as it grows.
+- **Leaf Count:** Count the number of leaves, particularly for young plants.
 
-### 4. **Feeding and Watering**
-   - **Last Watered**: *Date Picker* - The last date the plant was watered.
-   - **Feeding Schedule**: *Dropdown* - Frequency of feeding (e.g., Weekly, Biweekly).
-   - **Fertilizer Type**: *Dropdown* - Type of fertilizer used (e.g., Organic, Synthetic).
+## 3. Health Assessment
+**Purpose:** Assesses the plant’s health, identifying any signs of disease, pest infestation, or nutrient deficiencies.
 
-### 5. **Observations and Issues**
-   - **Issues Noted**: *Text Area* - Record any issues observed (e.g., Yellow leaves, Pest damage).
-   - **Actions Taken**: *Text Area* - Record any actions taken to address issues (e.g., Added fertilizer, Pruned affected leaves).
+### Key Points:
+- **General Health:** Rate the overall health of the plant (e.g., healthy, needs attention, critical).
+- **Pests:** Note any signs of pest activity, including the type of pest if known.
+- **Diseases:** Record any symptoms of disease, such as discolored leaves or wilting.
 
-## Data Validation
+## 4. Maintenance Log
+**Purpose:** Keeps a record of all maintenance activities performed on the plant.
 
-- **Plant Name and Location**: Required fields.
-- **pH Level**: Must be a numeric value between 3.0 and 10.0.
-- **Height**: Must be a positive integer.
+### Key Points:
+- **Watering:** Log the dates and amounts of watering.
+- **Fertilization:** Record when and what type of fertilizer was applied.
+- **Pruning:** Note any pruning or trimming done to the plant.
 
-## Example Form Submission
+## 5. Harvest Record
+**Purpose:** Documents the yield of the plant, including quantity and quality of the produce.
 
-```json
-{
-  "plantName": "Tomato",
-  "plantType": "Vegetable",
-  "plantingDate": "2024-04-01",
-  "plantingLocation": "Bed 3, Row 2",
-  "pHLevel": 6.5,
-  "soilType": "Loam",
-  "soilMoisture": "Moist",
-  "currentGrowthStage": "Vegetative",
-  "height": 30,
-  "healthStatus": "Healthy",
-  "lastWatered": "2024-04-10",
-  "feedingSchedule": "Weekly",
-  "fertilizerType": "Organic",
-  "issuesNoted": "None",
-  "actionsTaken": "Regular watering and fertilizing"
-}
-```
+### Key Points:
+- **Harvest Date:** Record the date of each harvest.
+- **Quantity:** Note the amount of produce harvested (e.g., number of fruits, weight).
+- **Quality:** Assess the quality of the harvest (e.g., size, color, taste).
+
+## 6. Observations and Notes
+**Purpose:** Provides space for any additional observations or notes that may be relevant to the plant’s care.
+
+### Key Points:
+- **Unusual Behavior:** Note any unusual growth patterns or behaviors.
+- **Weather Impact:** Record any significant weather events that may have affected the plant.
+- **General Observations:** Include any other observations that don’t fit into the other categories.

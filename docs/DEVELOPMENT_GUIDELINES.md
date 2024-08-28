@@ -1,38 +1,65 @@
-# Development Guidelines
+# DEVELOPMENT_GUIDELINES.md
 
-## Project Overview
+## Purpose
+This document provides a comprehensive set of guidelines for the development process, ensuring consistency, quality, and maintainability across all contributions to the GardenPlanner project.
 
-The Garden Planner project is a comprehensive tool for planning and tracking garden growth, focusing on high standards of code quality, security, and maintainability. This document outlines the development guidelines to ensure consistency and quality across all aspects of the project.
+## Table of Contents
+1. [Coding Standards](#1-coding-standards)
+2. [Best Practices](#2-best-practices)
+3. [Development Process](#3-development-process)
+4. [Testing Guidelines](#4-testing-guidelines)
+5. [Version Control](#5-version-control)
+6. [Code Review Process](#6-code-review-process)
 
-## Coding Standards
+## 1. Coding Standards
+**Purpose:** Establishes a set of rules and conventions for writing clean, readable, and maintainable code.
 
-- **Style Guide**: Follow the Airbnb JavaScript Style Guide. Use ESLint to enforce coding standards.
-- **Naming Conventions**: Use `camelCase` for variables and functions, `PascalCase` for classes, and `UPPER_SNAKE_CASE` for constants.
-- **Code Reviews**: All code must be reviewed and approved before merging. Focus on code readability, adherence to guidelines, and potential optimizations.
+### Key Points:
+- **Language:** JavaScript (Node.js for backend, React for frontend).
+- **Syntax:** Follow ECMAScript 6+ syntax and features.
+- **Indentation:** Use 2 spaces for indentation.
+- **Naming Conventions:** Use camelCase for variables and functions, PascalCase for classes and components, and UPPER_SNAKE_CASE for constants.
+- **Comments:** Write meaningful comments explaining the purpose and functionality of complex code blocks.
 
-## Security Guidelines
+## 2. Best Practices
+**Purpose:** Encourages practices that improve code quality and reduce technical debt.
 
-- **Environment Variables**: Store sensitive information in `.env` files, which should never be committed to version control. Use `dotenv-safe` to ensure required variables are set.
-- **Data Encryption**: Use HTTPS for data transmission. Encrypt sensitive data at rest using industry-standard algorithms.
-- **Input Validation**: Validate all user inputs server-side using a library like `Joi`. Sanitize data to prevent injection attacks.
-- **Authentication**: Implement JWT for API authentication. Store tokens securely, and use short expiration times with refresh tokens.
+### Key Points:
+- **DRY Principle:** Avoid code duplication by reusing components and functions.
+- **Modularity:** Break down the application into small, manageable modules with single responsibilities.
+- **Error Handling:** Implement robust error handling to prevent the application from crashing unexpectedly.
+- **Security:** Follow best practices for securing the application, including input validation, sanitization, and the use of environment variables for sensitive data.
 
-## Testing Practices
+## 3. Development Process
+**Purpose:** Outlines the workflow and methodologies to be followed during the development lifecycle.
 
-- **Unit Testing**: Write unit tests for all functions using Jest. Aim for 90% code coverage.
-- **Integration Testing**: Test interactions between components using Supertest. Focus on API endpoints and data flow.
-- **Test-Driven Development (TDD)**: Adopt TDD principles where possible. Write tests before implementing new features.
-- **Continuous Integration (CI)**: All tests must pass in the CI pipeline before code is merged. Set up automatic testing with GitHub Actions.
+### Key Points:
+- **Agile Methodology:** Follow an iterative approach, delivering small, incremental updates.
+- **Feature Branches:** Work on new features or bug fixes in separate branches named descriptively (e.g., `feature/add-plant-form`).
+- **Commits:** Write clear and concise commit messages following the format: `<type>(<scope>): <subject>`. Example: `feat(garden): add new plant form`.
+- **Pull Requests:** Ensure all work is submitted through pull requests and undergoes code review before merging.
 
-## Documentation
+## 4. Testing Guidelines
+**Purpose:** Ensures all code is thoroughly tested before deployment.
 
-- **Code Comments**: Write clear, concise comments explaining complex logic. Use JSDoc for functions and methods.
-- **README Files**: Each project should have a README with setup instructions, usage examples, and a brief project overview.
-- **API Documentation**: Document all API endpoints using Swagger or Postman. Include sample requests and responses.
-- **Architecture Docs**: Provide high-level architecture diagrams and descriptions in the `docs/` directory.
+### Key Points:
+- **Unit Tests:** Write unit tests for all components and functions, aiming for at least 80% code coverage.
+- **Integration Tests:** Ensure different parts of the application work together as expected.
+- **E2E Tests:** Write end-to-end tests to simulate user interactions and verify the application's functionality.
+- **Continuous Integration:** Use GitHub Actions to run tests automatically on every push or pull request.
 
-## CI/CD Workflow
+## 5. Version Control
+**Purpose:** Provides guidelines for using Git effectively in the project.
 
-- **Linting**: Run ESLint in the CI pipeline to enforce code quality standards.
-- **Automated Testing**: Execute all tests in the CI pipeline before merging. Use Jest for unit tests and Supertest for integration tests.
-- **Deployment**: Automate deployment to staging or production environments after successful CI runs. Use tools like Docker and Kubernetes for containerization and orchestration.
+### Key Points:
+- **Branch Naming:** Follow a consistent naming convention for branches (e.g., `feature/`, `bugfix/`, `hotfix/`).
+- **Commit Frequency:** Commit often with meaningful messages, ensuring each commit is a logical unit of work.
+- **Rebasing vs. Merging:** Prefer rebasing to keep the commit history clean, but use merging for integrating feature branches into the main branch.
+
+## 6. Code Review Process
+**Purpose:** Establishes a structured approach to reviewing and approving code changes.
+
+### Key Points:
+- **Review Checklist:** Ensure the code adheres to the coding standards, is well-tested, and aligns with the project goals.
+- **Feedback:** Provide constructive feedback, focusing on improvement rather than criticism.
+- **Approval:** At least one other team member must approve the pull request before it can be merged into the main branch.

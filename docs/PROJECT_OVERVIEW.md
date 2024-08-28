@@ -1,67 +1,62 @@
-# Garden Planner Project Overview
+# PROJECT_OVERVIEW.md
 
-## Introduction
+## Purpose
+This document provides a high-level summary of the GardenPlanner project, outlining its objectives, key stakeholders, and major milestones. It serves as a reference for anyone involved in the project, ensuring alignment with the overall goals.
 
-The Garden Planner project is a comprehensive tool designed to assist users in planning, tracking, and optimizing their gardening efforts. The application aims to provide a user-friendly interface for managing garden layouts, monitoring plant growth, and ensuring optimal growing conditions. The project is built using a modern tech stack to ensure scalability, security, and maintainability.
+## Table of Contents
+1. [Project Objectives](#1-project-objectives)
+2. [Key Stakeholders](#2-key-stakeholders)
+3. [Major Milestones](#3-major-milestones)
+4. [Project Scope](#4-project-scope)
+5. [Success Criteria](#5-success-criteria)
 
-## Objectives
+## 1. Project Objectives
+**Purpose:** Defines the primary goals of the GardenPlanner project, guiding all development efforts.
 
-- **Efficient Planning**: Enable users to plan their garden layouts with a focus on plant compatibility and pest control.
-- **Comprehensive Tracking**: Provide tools for detailed tracking of planting schedules, growth stages, soil conditions, and feeding times.
-- **Data-Driven Decisions**: Use integrated data on pH levels, planting times, and companion planting to guide users in making informed decisions.
-- **Scalability**: Build a system that can handle multiple gardens, varied plant species, and extensive tracking over time.
-- **Security**: Ensure that all user data is securely stored and handled, with strong authentication and authorization mechanisms.
+### Key Objectives:
+- **Usability:** Create an intuitive and user-friendly interface for garden planning.
+- **Functionality:** Provide robust tools for managing and tracking garden activities.
+- **Sustainability:** Implement features that promote sustainable gardening practices.
+- **Scalability:** Ensure the platform can grow and adapt to user needs over time.
 
-## Key Features
+## 2. Key Stakeholders
+**Purpose:** Identifies the individuals and groups with a vested interest in the project’s success.
 
-- **Garden Layout Designer**: A drag-and-drop interface for designing garden plots, taking into account plant spacing and compatibility.
-- **Plant Tracking**: Forms for entering and updating data on individual plants, including growth stages, issues encountered, and actions taken.
-- **Monthly Monitoring**: Tools for recording monthly observations, with automated reminders for tasks like feeding and pH testing.
-- **Reference Tables**: Built-in tables for planting times, pH levels, and feeding schedules, tailored to specific plants and growing conditions.
-- **Data Visualization**: Graphs and charts to visualize growth trends, soil health, and other key metrics.
+### Key Stakeholders:
+- **Project Lead:** Responsible for overseeing the project’s progress and making key decisions.
+- **Development Team:** Implements the features and functionalities of the GardenPlanner.
+- **Design Team:** Crafts the user interface and experience.
+- **End Users:** Gardeners and horticulturalists who will use the platform.
+- **Investors:** Provide the financial resources necessary to develop and maintain the project.
 
-## Technology Stack
+## 3. Major Milestones
+**Purpose:** Tracks the significant achievements and deadlines in the project timeline.
 
-- **Frontend**: React.js for building an interactive, responsive user interface.
-- **Backend**: Express.js with Node.js, connected to a PostgreSQL database for robust data handling.
-- **Testing**: Jest and Supertest for unit and integration testing.
-- **CI/CD**: GitHub Actions for continuous integration and deployment, ensuring code quality and automated testing.
-- **Security**: JWT for authentication, HTTPS for secure data transmission, and environment variables for sensitive configurations.
+### Major Milestones:
+- **MVP Launch:** Release the Minimum Viable Product for initial testing and feedback.
+- **Beta Release:** Launch a public beta version to gather user feedback.
+- **Full Release:** Deploy the full version of the platform with all intended features.
+- **User Growth:** Achieve a specific user base target within the first year.
+- **Sustainability Features:** Implement advanced features focused on sustainable gardening practices.
 
-## Development Guidelines
+## 4. Project Scope
+**Purpose:** Defines the boundaries of the project, outlining what is included and what is not.
 
-- **Coding Standards**: Follow the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) to maintain code consistency.
-- **Documentation**: Keep all code and features thoroughly documented using JSDoc and Markdown files. Update the `README.md` regularly to reflect the current state of the project.
-- **Testing**: Implement test-driven development (TDD) where possible. Ensure high test coverage for all critical components.
-- **Collaboration**: Use Git for version control, with a branching strategy that supports feature development, testing, and bug fixes.
+### Scope Inclusions:
+- **Feature Set:** All features related to garden planning, tracking, and management.
+- **User Interface:** A responsive and intuitive interface that works across devices.
+- **Data Management:** Tools for managing garden-related data, including plant information, schedules, and logs.
 
-## Strategic Analysis
+### Scope Exclusions:
+- **Non-Gardening Features:** Any features unrelated to gardening (e.g., general home management).
+- **Third-Party Integrations:** Integrations with tools not directly related to garden planning (e.g., smart home systems).
 
-- **Strengths**: The project’s well-structured architecture and clear documentation provide a solid foundation for future development. The use of modern technologies ensures scalability and maintainability.
-- **Weaknesses**: Current limitations include the lack of extensive user testing and potential security vulnerabilities that need to be addressed before the production release.
-- **Opportunities**: There is significant potential for integrating third-party APIs to enhance functionality, such as weather data for planting recommendations.
-- **Threats**: Potential risks include scope creep, which could lead to delays, and the need to maintain up-to-date security practices to protect user data.
+## 5. Success Criteria
+**Purpose:** Establishes the metrics by which the success of the GardenPlanner project will be measured.
 
-## Roadmap
-
-1. **Phase 1: Initial Setup and Core Features**
-   - Set up the project environment and repository.
-   - Develop the basic garden layout designer and plant tracking forms.
-   - Implement the backend API with database integration.
-
-2. **Phase 2: Advanced Features and Security**
-   - Integrate data visualization tools for tracking growth trends.
-   - Implement user authentication and authorization.
-   - Expand the database schema to support more complex tracking and analysis.
-
-3. **Phase 3: Optimization and Deployment**
-   - Optimize the frontend for performance and responsiveness.
-   - Set up continuous integration and deployment pipelines.
-   - Deploy the application to a cloud service, ensuring scalability and reliability.
-
-## Contributors
-
-- **Project Lead**: [Your Name]
-- **Backend Developer**: [Backend Developer’s Name]
-- **Frontend Developer**: [Frontend Developer’s Name]
-- **UI/UX Designer**: [Designer’s Name]
+### Key Success Criteria:
+- **User Satisfaction:** Achieve a high user satisfaction score in post-launch surveys.
+- **Adoption Rate:** Reach a target number of active users within the first six months.
+- **Feature Completion:** Implement all features in the initial project plan on time and within budget.
+- **Bug Rate:** Maintain a low rate of critical bugs post-launch.
+- **Sustainability Impact:** Demonstrate a measurable positive impact on sustainable gardening practices among users.
